@@ -4,7 +4,7 @@ import React, { useRef } from 'react'
 import Image from 'next/image'
 import { MenuSquareIcon, PanelRightClose } from 'lucide-react'
 
-const Navbar = () => {
+const Navbae = () => {
 
     const sideMenuRef = useRef(null);
 
@@ -19,8 +19,7 @@ const Navbar = () => {
   return (
     <>
     
-    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4
-    flex items-center justify-between z-50'>
+    <nav className='w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50'>
         <a href='#top' className='animate-bounce'>
             <span className="text-3xl font-extrabold tracking-wide cursor-pointer mr-14 
                  bg-gradient-to-r from-teal-500 to-teal-200 
@@ -75,4 +74,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbae
