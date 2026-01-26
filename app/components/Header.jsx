@@ -29,7 +29,7 @@ const Header = () => {
         />
       </div>
 
-      {/* Right Side */}
+      {/* Right Sideeeee */}
       <div className="flex flex-col items-center text-center max-w-2xl">
         
         <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 
@@ -58,7 +58,8 @@ const Header = () => {
             gap-2 shadow-lg hover:bg-teal-300 hover:scale-105 transition-all
              hover:text-black">
             Contact me 
-            <Image src={assets.right_arrow_white} alt="Arrow" className="w-4 hover:animate-spin"/>
+            <Image src={assets.right_arrow_white} alt="Arrow" className="w-4 
+            hover:animate-spin"/>
           </a>
 
           {/* Resume Button */}
