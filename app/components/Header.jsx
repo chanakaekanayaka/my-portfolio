@@ -3,72 +3,82 @@ import Image from 'next/image'
 import React from 'react'
 import profileImg from '../../Publicc/profile-img.png';
 
-
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-6xl z-0 mx-auto h-screen 
-    flex flex-col md:flex-row items-center justify-center gap-10 
-    md:gap-16 pt-20">
+    <div className="w-full min-h-screen flex flex-col
+     md:flex-row items-center justify-center 
+    gap-12 md:gap-20 px-6 py-20 md:py-0 
+    bg-gradient-to-b from-white via-teal-50 to-white 
+    dark:from-gray-900 dark:via-gray-900
+     dark:to-teal-950/20 overflow-hidden">
       
-      {/* Left Side */}
-      <div className="relative shrink-0">
+      {/* Left Side - Profile Image */}
+      <div className="relative shrink-0 group">
         
-        
-        <div className="absolute inset-0 bg-teal-400 
-        rounded-3xl blur-lg opacity-50 animate-pulse"></div>
-        
+        {/* Glow Effect */}
+        <div className="absolute inset-0 -inset-2 bg-teal-400/50 
+        rounded-3xl blur-2xl opacity-40 animate-pulse 
+        group-hover:opacity-60 transition-opacity duration-500"></div>
         
         <Image 
           src={profileImg}
           alt="Profile" 
           width={320}   
           height={800}  
-          className="relative rounded-3xl w-64 h-90 md:w-80 md:h-80 object-cover 
-          border-[6px] border-teal-700 hover:border-teal-400 shadow-2xl 
-          transition-all duration-300"
+          priority
+          className="relative rounded-3xl w-64 
+          h-auto md:w-80 md:h-auto object-cover 
+          border-[6px] border-white dark:border-teal-900 
+          shadow-2xl shadow-teal-900/20
+          group-hover:scale-[1.02] transition-transform duration-500"
         />
       </div>
 
-      {/* Right Sideeeee */}
-      <div className="flex flex-col items-center text-center max-w-2xl">
+      {/* Right Side - Content */}
+      <div className="flex flex-col items-center
+       md:items-start text-center md:text-left max-w-2xl">
         
-        <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 
-        font-medium text-teal-900 dark:text-teal-200">
-          Hi! I'm Chanaka Ekanayaka 
+        <h3 className="flex items-center gap-2 text-xl md:text-2xl mb-4 
+        font-semibold text-teal-800 dark:text-teal-300">
+            <span className="animate-wave">👋</span> Hi! I'm Chanaka Ekanayaka 
         </h3>
 
-        <h1 className="text-3xl sm:text-6xl lg:text-[66px] 
-        font-extrabold tracking-tight leading-tight text-black
-         dark:text-white">
-          Full Stack Web Developer based in <span className="text-teal-300">Sri Lanka</span>
+        <h1 className="text-4xl sm:text-6xl lg:text-[66px] 
+        font-extrabold tracking-tight leading-[1.1] text-gray-900
+          dark:text-white mb-6">
+          Full Stack Web Developer based in <span className="text-teal-500 underline
+           decoration-teal-300/30 underline-offset-8">Sri Lanka</span>
         </h1>
 
-        <p className="max-w-lg mx-auto font-normal text-gray-600
-         dark:text-gray-400 text-lg leading-relaxed mt-4">
+        <p className="max-w-lg font-normal text-gray-600
+          dark:text-gray-300 text-base md:text-lg leading-relaxed mb-8">
           I am an Undergraduate Full Stack Developer passionate 
           about building scalable web applications. Bridging the
            gap between frontend creativity and backend logic.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row items-center 
+        gap-4 w-full sm:w-auto">
           
           {/* Contact Button */}
-          <a href="#contact" className="px-10 py-3 rounded-full
-           bg-teal-600 text-white font-medium flex items-center
-            gap-2 shadow-lg hover:bg-teal-300 hover:scale-105 transition-all
-             hover:text-black">
+          <a href="#contact" className="px-8 py-3.5 rounded-full w-full sm:w-auto
+           bg-teal-600 text-white font-semibold flex items-center justify-center
+            gap-2 shadow-lg shadow-teal-500/30 hover:bg-teal-500
+             hover:scale-105 active:scale-95 transition-all duration-300">
             Contact me 
-            <Image src={assets.right_arrow_white} alt="Arrow" className="w-4 
-            hover:animate-spin"/>
+            <Image src={assets.right_arrow_white} alt="Arrow" className="w-4 h-4"/>
           </a>
 
           {/* Resume Button */}
-          <a href="/sample-resume.pdf" download className="px-10 py-3 
-          rounded-full border border-gray-400 bg-white dark:bg-transparent
-           dark:text-white text-gray-700 font-medium flex items-center gap-2
-            hover:border-teal-500 hover:text-teal-300 hover:bg-teal-50 transition-all">
+          <a href="/sample-resume.pdf" download className="px-8 py-3.5
+           rounded-full w-full sm:w-auto
+          border border-gray-300 dark:border-gray-600 bg-white dark:bg-transparent
+           dark:text-white text-gray-700 font-medium flex items-center justify-center gap-2
+            hover:border-teal-500 hover:text-teal-600 hover:bg-teal-50
+             dark:hover:bg-teal-900/30 transition-all duration-300">
             My Resume 
-            <Image src={assets.download_icon} alt="Download" className="w-4 hover:animate-pulse"/>
+            <Image src={assets.download_icon} alt="Download"
+             className="w-4 h-4 group-hover:animate-bounce"/>
           </a>
 
         </div>
