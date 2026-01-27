@@ -16,7 +16,7 @@ const About = () => {
         About me
       </h2>
 
-        {/* --- Main Content Container --- */}
+       
         <div className='flex flex-col items-center justify-center gap-8'>
             
             {/* --- Description --- */}
@@ -37,7 +37,7 @@ const About = () => {
                 {infoList.map(({icon, iconDark, title, description}, index)=>(
                     <li key={index} className='border-[0.5px] border-teal-200 
                     rounded-xl p-6 cursor-pointer
-                    hover:-translate-y-2 duration-300 hover:bg-teal-300 hover:shadow-lg 
+                    hover:-translate-y-2 duration-300 hover:bg-teal-100 hover:shadow-lg 
                     hover:shadow-teal-100/50 bg-teal-80 transition-all'>
                         
                         
