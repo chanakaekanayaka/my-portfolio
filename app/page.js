@@ -4,6 +4,7 @@ import About from "./components/About";
 import Header from "./components/Header";
 import Navbae from "./components/Navbae";
 import Services from "./components/Services";
+import Work from "./components/Work";
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
     <Header/>
     <About/>
     <Services/>
+    <Work/>
     </>
    
   );

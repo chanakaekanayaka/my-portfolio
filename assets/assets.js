@@ -93,6 +93,21 @@ export const workData = [
         bgImage: '/work-3.png',
     },
     {
+        title: 'Photography site',
+        description: 'Web Design',
+        bgImage: '/work-3.png',
+    },
+    {
+        title: 'Photography site',
+        description: 'Web Design',
+        bgImage: '/work-3.png',
+    },
+    {
+        title: 'Photography site',
+        description: 'Web Design',
+        bgImage: '/work-3.png',
+    },
+    {
         title: 'UI/UX designing',
         description: 'UI/UX Design',
         bgImage: '/work-4.png',
