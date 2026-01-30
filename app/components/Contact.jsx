@@ -17,7 +17,7 @@ const Contact = () => {
              "I specialize in building secure, scalable, 
               and high-performance web 
               applications. From interactive frontends to complex 
-              backend logic, I deliver end-to-end solutions 
+              backend logic, I deliver end-to-end solutions for
               tailored to your needs."
          </p>
 
