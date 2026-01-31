@@ -20,6 +20,13 @@ const Contact = () => {
               backend logic, I deliver end-to-end solutions for
               tailored to your needs."
          </p>
+          <form className='max-w-2xl mx-auto '>
+            <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
+              <input type='text' />
+
+            </div>
+
+          </form>
 
       </div>
      
