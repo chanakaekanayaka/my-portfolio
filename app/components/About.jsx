@@ -5,14 +5,15 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
+    <div id='about' className='w-full px-[12%] py-20 scroll-mt-20 
+      bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white'>
       
       {/* --- Section Headings --- */}
-      <h4 className='text-center mb-2 text-lg font-medium
-       text-teal-600 tracking-wide uppercase hover:animate-pulse'>
+      <h4 className='text-center mb-2 text-lg font-semibold
+       text-teal-400 tracking-widest uppercase'>
         Introduction
       </h4>
-      <h2 className='text-center text-5xl font-bold text-teal-950 mb-10'>
+      <h2 className='text-center text-5xl font-bold text-white mb-10'>
         About me
       </h2>
 
@@ -20,8 +21,8 @@ const About = () => {
         <div className='flex flex-col items-center justify-center gap-8'>
             
             {/* --- Description --- */}
-            <p className='mb-6 max-w-2xl font-medium text-center
-             text-gray-600 text-lg leading-8'>
+            <p className='mb-8 max-w-2xl font-light 
+         text-center text-gray-400 text-lg leading-8'>
                 Hi, I'm Chanaka Ekanayaka. 
                 I am an aspiring Full-Stack 
                 Developer and Data Science 

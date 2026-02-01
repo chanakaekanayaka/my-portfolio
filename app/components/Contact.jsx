@@ -1,8 +1,34 @@
+"use client";
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+
+  const [result, setResult] = useState("")
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "112f17a4-dd7c-49f6-9ec4-e899f322fc66");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <div 
       id='contact' 
@@ -28,7 +54,6 @@ const Contact = () => {
 
       <div className='flex flex-col items-center justify-center gap-8'>
          <p className='mb-8 max-w-2xl font-light 
-         
          text-center text-gray-400 text-lg leading-8'>
              "I specialize in building secure, scalable, 
               and high-performance web 
@@ -37,14 +62,17 @@ const Contact = () => {
               tailored to your needs."
          </p>
 
-          <form className='max-w-2xl mx-auto w-full'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8'>
+          <form className='max-w-2xl mx-auto w-full'
+          onSubmit={onSubmit}>
+            <div className='grid grid-cols-1 md:grid-cols-2
+             gap-6 mt-10 mb-8'>
               
               {/* Name Input */}
               <input 
                 type='text' 
                 placeholder='Enter your name' 
-                required 
+                required
+                name='name' 
                 className='flex-1 p-4 outline-none border
                  border-gray-800 rounded-lg bg-gray-900 text-white 
                 placeholder-gray-500 focus:border-teal-500 focus:bg-gray-900/50 
@@ -55,7 +83,8 @@ const Contact = () => {
               <input 
                 type='email' 
                 placeholder='Enter your email' 
-                required 
+                required
+                name='email' 
                 className='flex-1 p-4 outline-none border
                  border-gray-800 rounded-lg bg-gray-900 text-white 
                 placeholder-gray-500 focus:border-teal-500 focus:bg-gray-900/50 
@@ -67,7 +96,8 @@ const Contact = () => {
             <textarea 
               rows='6' 
               placeholder='Enter your message' 
-              required 
+              required
+              name='message' 
               className='w-full p-4 outline-none border
                border-gray-800 rounded-lg bg-gray-900 text-white mb-6 resize-none
               placeholder-gray-500 focus:border-teal-500 focus:bg-gray-900/50 
@@ -78,7 +108,7 @@ const Contact = () => {
             <button 
               type='submit' 
               className='py-3 px-8 w-max flex items-center 
-              justify-between gap-2 bg-teal-600 
+              justify-between gap-2 bg-black 
               text-white rounded-full mx-auto hover:bg-teal-500
                hover:scale-105 duration-300 
               shadow-[0_0_20px_rgba(20,184,166,0.4)] 
@@ -90,7 +120,7 @@ const Contact = () => {
             </button>
 
             <p className='mt-4 text-center text-teal-400 
-            animate-pulse'>Sending...</p>
+            animate-pulse'>{result}</p>
 
           </form>
       </div>
@@ -99,3 +129,5 @@ const Contact = () => {
 }
 
 export default Contact
+
+//112f17a4-dd7c-49f6-9ec4-e899f322fc66

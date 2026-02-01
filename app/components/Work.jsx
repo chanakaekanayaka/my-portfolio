@@ -8,22 +8,23 @@ const Work = () => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
+        <div id='work' className='w-full px-[12%] py-20 scroll-mt-20 
+      bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white'>
 
            
-            <h4 className='text-center mb-2 text-lg font-medium
-         text-teal-600 tracking-wide uppercase hover:animate-pulse'>
+            <h4 className='text-center mb-2 text-lg font-semibold
+       text-teal-400 tracking-widest uppercase'>
                 My Portfolio
             </h4>
-            <h2 className='text-center text-5xl font-bold text-teal-950 mb-10'>
+            <h2 className='text-center text-5xl font-bold text-white mb-10'>
                 My Latest Work
             </h2>
 
             <div className='flex flex-col items-center justify-center gap-8'>
 
              
-                <p className='mb-6 max-w-2xl font-medium text-center
-             text-gray-600 text-lg leading-8'>
+                <p className='mb-8 max-w-2xl font-light 
+                 text-center text-gray-400 text-lg leading-8'>
                     "Welcome to my project portfolio. Here, I showcase a
                     diverse range of applications, from AI-powered SaaS
                     platforms to complex E-commerce systems. Each project
@@ -76,11 +77,12 @@ const Work = () => {
                 {workData.length > 4 && (
                     <button 
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className='w-max flex items-center justify-center gap-2 
-                        text-gray-700 border-[0.5px] border-gray-700 
-                        rounded-full py-3 px-10 mx-auto my-5
-                        hover:bg-teal-500 hover:text-white
-                         hover:border-teal-500 transition-all duration-300 shadow-md'>
+                        className='py-3 px-8 w-max flex items-center 
+              justify-between gap-2 bg-black 
+              text-white rounded-full mx-auto hover:bg-teal-500
+               hover:scale-105 duration-300 
+              shadow-[0_0_20px_rgba(20,184,166,0.4)] 
+              hover:shadow-[0_0_30px_rgba(20,184,166,0.6)]'>
                         
                         {isExpanded ? 'Show Less' : 'Show More'}
                         
